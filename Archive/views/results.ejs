@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="container-fluid bg text-center">
+	<div class="row text-center">
+		<h1 class="white">Results</h1>
+		<hr>
+	</div>
+	<div class="row">
+
+		<% data["Search"].forEach(function(movie){ %>
+		
+		<div class="col-lg-3 col-md-4 col-sm-6">
+			<img  class="img-thumbnail"src="<%=movie["Poster"]%>">
+			<p> <strong> <%= movie["Title"] %></strong> - <%= movie["Year"] %> </p>	 	
+		</div>
+
+		<% }); %>	
+	</div>
+<a class="btn btn-primary" href="/">Back</a>	
+<br>
+<br>
+</div>
+
+
+<% include partials/footer %>
